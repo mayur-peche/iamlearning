@@ -38,18 +38,14 @@ public class Student
     {  
         System.out.println("All the Student Details are :");
 
-       for (Student student : arr) {
-         System.out.println("\nStudent name :"+student.name);
-         System.out.println("Student age : "+ student.age);
-         System.out.println("Student College : "+student.College);
-         System.out.println("Student address  : "+student.Address);
+       for (Student std : arr) {
+         System.out.println("\nStudent name :"+std.name);
+         System.out.println("Student age : "+ std.age);
+         System.out.println("Student College : "+std.College);
+         System.out.println("Student address  : "+std.Address);
           
        }
     }
-   
-
-
-
  public static void main(String[]args)
  {
     System.out.println("Enter the Size of Array Student");
