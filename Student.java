@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Student
-{
 
+{
     String name;
     int age;
     String College;
@@ -24,14 +24,12 @@ public class Student
          System.out.println("College Address");
          std1.Address=sc.next();
          arr[count]=std1;
-         count++;
-         
+         count++;        
       }
       else
       {
         System.out.println("No vacancy\n");
       }
-
     }
 
     void displayStudent()
@@ -46,6 +44,7 @@ public class Student
           
        }
     }
+
  public static void main(String[]args)
  {
     System.out.println("Enter the Size of Array Student");
