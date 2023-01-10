@@ -7,7 +7,7 @@ public class Student
     String College;
     String Address;
     int count=0;
-    static Student arr[];
+    Student arr[];
     Scanner sc= new Scanner(System.in);
 
     void Add()
