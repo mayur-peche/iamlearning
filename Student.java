@@ -18,6 +18,34 @@ class helperclass extends Student{
     HashMap<Integer,Student> hashob = new HashMap<Integer,Student>();
     Scanner sc = new Scanner(System.in);
     
+    
+    public static void main(String[] args) 
+    {
+
+        boolean v=true;
+        while (v)
+        {
+            {
+                System.out.println("\n Enter Your Choice \n 1.addStudent  \n 2.searchStudent  \n 3.deleteStudent \n 4.Exit \n");
+                Scanner sc = new Scanner(System.in);
+                int choice = sc.nextInt();
+                helperclass H1=new helperclass();
+                switch(choice)
+                {
+                    case 1: H1.addstudent();
+                    break;
+                    case 2: H1.SearchStudent();
+                    break;
+                    case 3: H1.deleteStudent();
+                    break;
+                    case 4: v=false;
+                    break;
+                    default: System.out.println("Invalid Input");
+                    sc.close();
+                }    
+            }
+        } 
+    }
 
     void addstudent()
         {
@@ -47,10 +75,10 @@ class helperclass extends Student{
         void SearchStudent()
         {
             System.out.println("Enter Student Rollno to search");
-            int Rollno= sc.nextInt();
-            for (Map.Entry<Integer,Student> mapElement : hashob.entrySet()) 
+            int rollno= sc.nextInt();
+            for (java.util.Map.Entry<Integer,Student> mapElement : hashob.entrySet()) 
             { 
-                if(mapElement.getKey() == Rollno) {
+                if(mapElement.getKey() == rollno) {
                 Student s = mapElement.getValue();
                 System.out.println("Name :" +s.name);
                 System.out.println("College :" +s.college);
@@ -69,29 +97,4 @@ class helperclass extends Student{
         {
 
         }
-    public static void main(String[] args) 
-    {
-
-        boolean v=true;
-        while (v)
-        {
-            {
-                System.out.println("\n Enter Your Choice \n 1.addStudent  \n 2.searchStudent  \n 3.deleteStudent \n 4.Exit \n");
-                Scanner sc = new Scanner(System.in);
-                int choice = sc.nextInt();
-                helperclass H1=new helperclass();
-                switch(choice){
-                    case 1: H1.addstudent();
-                    break;
-                    case 2: H1.SearchStudent();
-                    break;
-                    case 3: H1.deleteStudent();
-                    break;
-                    case 4: v=false;
-                    break;
-                    default: System.out.println("Invalid Input");
-                }    
-        }
-    } 
-}
 }
